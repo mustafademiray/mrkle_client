@@ -1,0 +1,14 @@
+[package]
+name = "mrkle_client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[target.'cfg(target_arch = "x86_64")']
+
+[dependencies]
+reqwest = { version = "0.11", features = ["multipart", "blocking"] }
+tokio = { version = "1", features = ["full"] }  # Necessary for async reqwest usage
+hyper = "0.14"
+openssl = "0.10" 
+sha2 = "0.9"
