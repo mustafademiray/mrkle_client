@@ -5,5 +5,4 @@ before uploading the files, it generates a Merkle Proof to check the completenes
 it uses sha256 as a hashing algorithm and customized structs for the Merkle Tree construction.
 
 
-![image](https://github.com/mustafademiray/mrkle_client/assets/9093326/910f5775-f212-49d2-9c4b-860403f719d0)
 
