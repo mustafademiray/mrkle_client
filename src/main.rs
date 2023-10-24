@@ -171,9 +171,8 @@ impl MerkleTree {
                 let sibling = &self.nodes[sibling_index];
                 proof.push(("sibling".to_string(), sibling.hash.clone()));
             } else {
-                // Handle the case where the sibling is missing (you can choose how to handle this)
-                // Here, we just add an empty string as a placeholder.
-                proof.push(("sibling".to_string(), String::new()));
+                // Handle the case where the sibling is missing by adding a placeholder.
+                proof.push(("sibling".to_string(), "missing-sibling".to_string()));
             }
     
             if parent.left == Some(current_index) {
@@ -187,6 +186,7 @@ impl MerkleTree {
     
         Some(proof)
     }
+    
     
 }
 
